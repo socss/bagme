@@ -1,4 +1,4 @@
-module github.com/speedata/bagme
+module github.com/socss/bagme
 
 go 1.18
 
