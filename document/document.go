@@ -35,6 +35,11 @@ func (d *Document) AddCSS(css string) {
 	d.cssbuilder.AddCSS(css)
 }
 
+// NextPage adds a new page
+func (d *Document) NextPage() error {
+	return d.cssbuilder.NewPage()
+}
+
 // HTMLToText interprets the HTML string and applies all previously read CSS data.
 func (d *Document) HTMLToText(html string) (*frontend.Text, error) {
 	return d.cssbuilder.HTMLToText(html)
